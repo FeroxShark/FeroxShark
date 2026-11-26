@@ -11,9 +11,9 @@
 <!-- ahora:inicio -->
 | Project | Updated |
 |:--|:--|
+| **[Fatal Lyrics](https://github.com/FeroxShark/fatal-lyrics)**<br><sub>Synced lyrics as Win95 dialogs, with a CRT mode</sub> | Nov 26 |
 | **[Trama](https://github.com/FeroxShark/trama)**<br><sub>Desktop app for running AI coding agents</sub> | Nov 26 |
 | **[AltR](https://github.com/FeroxShark/alt-r-windows)**<br><sub>Read selected text aloud on Windows</sub> | Nov 19 |
-| **[Fatal Lyrics](https://github.com/FeroxShark/fatal-lyrics)**<br><sub>Synced lyrics as Win95 dialogs, with a CRT mode</sub> | Oct 22 |
 | **[SpaceLens](https://github.com/FeroxShark/SpaceLens)**<br><sub>Disk usage treemap for Linux</sub> | Jun 12 |
 <!-- ahora:fin -->
 
