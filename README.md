@@ -33,7 +33,7 @@ A desktop app that runs a lead agent per project and the workers it delegates to
 
 <a href="https://github.com/FeroxShark/fatal-lyrics"><img src="media/fatal-lyrics/crt.gif" alt="Fatal Lyrics in CRT mode" width="100%"></a>
 
-Synced lyrics for whatever is playing. **CRT mode** turns every monitor into a curved tube with scanlines and paints each line word by word in giant type over animated backgrounds: `fatal crt toggle`, or Super+Shift+Y. With CRT off, the lyrics pop up as glitchy Windows 95 error dialogs.
+Synced lyrics from Spotify or any MPRIS player. **CRT mode** turns every monitor into one giant cathode ray tube, with barrel curvature, scanlines and phosphor bleed, and paints each line in huge type: `fatal crt toggle`, bound to any key you like. With CRT off, the lyrics pop up as glitchy Windows 95 error dialogs.
 
 <sub>QML · Qt Quick · Hyprland</sub>
 
