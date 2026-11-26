@@ -61,15 +61,23 @@ p.append(f'<rect x="{okx+7}" y="{oky+7}" width="{okw-14}" height="{okh-14}" fill
 p.append(texto(REG, "OK", okx + okw / 2, oky + 29, 22, "#000", "middle")[0])
 dialogo = "".join(p)
 
-# glitch breve: el diálogo tiembla y dos franjas de color cruzan, ~0,3 s cada 6 s
-glitch = f'''<g opacity="0">
-<animate attributeName="opacity" values="0;0;1;0;1;0;0" keyTimes="0;.9;.91;.93;.95;.97;1" dur="6s" repeatCount="indefinite"/>
+# glitch breve: el diálogo tiembla y dos franjas de color cruzan, ~0,3 s cada 6 s.
+# En CSS y no en SMIL: así se apaga con "reducir movimiento" del sistema.
+estilo = '''<style>
+.tiembla{animation:tiembla 6s linear infinite}
+.franjas{opacity:0;animation:franjas 6s linear infinite}
+@keyframes tiembla{0%,90%{transform:translate(0,0)}92%{transform:translate(5px,0)}94%{transform:translate(-4px,0)}96%,100%{transform:translate(0,0)}}
+@keyframes franjas{0%,90%{opacity:0}91%{opacity:1}93%{opacity:0}95%{opacity:1}97%,100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.tiembla,.franjas{animation:none}}
+</style>'''
+glitch = f'''<g class="franjas">
 <rect x="{X-6}" y="{Y+70}" width="{DW*0.62:.0f}" height="12" fill="#ff2fd0" opacity=".75"/>
 <rect x="{X+DW*0.35:.0f}" y="{Y+150}" width="{DW*0.6:.0f}" height="8" fill="#2fffa0" opacity=".7"/>
 </g>'''
 svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="FeroxShark.exe. Hi, I'm Ferox. I build tools for Linux and AI agent workflows.">
 <title>Hi, I'm Ferox. I build tools for Linux and AI agent workflows.</title>
-<g><animateTransform attributeName="transform" type="translate" values="0 0;0 0;5 0;-4 0;0 0;0 0" keyTimes="0;.9;.92;.94;.96;1" dur="6s" repeatCount="indefinite"/>{dialogo}</g>
+{estilo}
+<g class="tiembla">{dialogo}</g>
 {glitch}
 </svg>
 '''
