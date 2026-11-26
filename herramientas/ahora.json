@@ -1,0 +1,11 @@
+{
+  "owner": "FeroxShark",
+  "max": 4,
+  "repos": [
+    { "repo": "trama", "name": "Trama", "what": "Desktop app for running AI coding agents" },
+    { "repo": "fatal-lyrics", "name": "Fatal Lyrics", "what": "Synced lyrics as Win95 dialogs, with a CRT mode" },
+    { "repo": "SpaceLens", "name": "SpaceLens", "what": "Disk usage treemap for Linux" },
+    { "repo": "alt-r-windows", "name": "AltR", "what": "Read selected text aloud on Windows" },
+    { "repo": "radar-ofertas-cba", "name": "Radar Ofertas", "what": "Supermarket deals scraper for Córdoba" }
+  ]
+}
